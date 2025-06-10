@@ -33,6 +33,7 @@
 
 .banner-content {
     position: absolute;
+    top: 20%;
     font-size: 5 rem;
     color: white;
 }
