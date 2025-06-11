@@ -40,7 +40,11 @@
 
 .banner-content {
     position: absolute;
+<<<<<<< HEAD
     top: 30%;
+=======
+    top: 20%;
+>>>>>>> ffdf4d3be1127f5d5928e5bb68778b0ddb4536f7
     font-size: 5 rem;
     color: white;
 }
