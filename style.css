@@ -1,4 +1,3 @@
-  html,
   body {
       height: 100%;
   }
@@ -13,7 +12,8 @@
   nav ul {
       display: flex;
       justify-content: space-around;
-      background-color: #222;
+      align-items: center;
+      background-color: #522b06;
       padding: 15px;
       list-style: none;
   }
@@ -24,6 +24,13 @@
       font-size: 18px;
   }
 
+  #logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
   .banner {
     display: flex;
     flex-direction: column;
@@ -33,34 +40,43 @@
 
 .banner-content {
     position: absolute;
+    top: 30%;
     font-size: 5 rem;
     color: white;
 }
 
 .banner img {
     padding: 50px;
-    width: 90%;
-    height: 100vh; 
+    width: 70%;
+    height: 90vh; 
     object-position: 50% 70%;
     display: block;
-    object-fit: cover;
+    object-fit:cover;
+    border-radius: 100px;
 }
-  .menu-cards {
+
+  .cards{
+      border: 20px solid #522b06;;
+      margin: 20px;
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
+      flex-direction: column;
   }
 
-  .card {
-      padding: 20px;
-      border: 1px solid #ddd;
-      width: 200px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  .card{
+    display: flex;
+    align-items: center; 
+    gap:100px;
+    border-bottom: 1px dotted #522b06;;
+    width: 100%;
   }
-
+  .card img {
+    width: 80px; 
+    height: auto;
+    border-radius: 10px;
+     margin-left: auto;
+}
   footer {
-      background: #222;
+      background: #522b06;;
       color: white;
       padding: 10px 0;
       margin-top: 20px;
