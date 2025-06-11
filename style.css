@@ -40,13 +40,12 @@
 
 .banner-content {
     position: absolute;
-<<<<<<< HEAD
     top: 30%;
-=======
-    top: 20%;
->>>>>>> ffdf4d3be1127f5d5928e5bb68778b0ddb4536f7
-    font-size: 5 rem;
-    color: white;
+    font-size: 15 rem;
+    color: #522b06;
+    background-color: rgba(240, 248, 255, 0.527);
+    border-radius: 30px;
+    padding: 20px 100px;
 }
 
 .banner img {
@@ -69,10 +68,12 @@
   .card{
     display: flex;
     align-items: center; 
-    gap:100px;
+    gap:20px;
     border-bottom: 1px dotted #522b06;;
-    width: 100%;
+    width: 99%;
+
   }
+
   .card img {
     width: 80px; 
     height: auto;
@@ -84,4 +85,16 @@
       color: white;
       padding: 10px 0;
       margin-top: 20px;
+  }
+
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+  }
+  .social-media{
+    width: 40px;
+    padding: 20px;
+    border-radius: 35%;
+    /* object-fit: cover; */
   }
