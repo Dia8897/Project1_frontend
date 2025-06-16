@@ -30,6 +30,21 @@
       font-size: 18px;
   }
 
+  nav ul li a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #8b521c;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  nav ul li a:hover {
+      background-color: #a76228;
+      transform: scale(1.05);
+  }
+
+
   #logo {
       width: 50px;
       height: 50px;
@@ -45,7 +60,7 @@
   }
 
   .banner-inner {
-      width: 90%;
+      width: 70%;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -58,7 +73,7 @@
       margin-top: 20px;
       border-radius: 20px;
       color: #522b06;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
   }
 
   .banner-row {
@@ -70,8 +85,8 @@
   }
 
   .banner-row img {
-      width: 70%;
-      height: 110vh;
+      width: 60%;
+      height: 70vh;
       border-radius: 20px;
   }
 
@@ -80,27 +95,35 @@
       text-align: justify;
   }
 
-
+  .menu h2 {
+      margin-top: 80px;
+  }
 
   .cards {
       margin: 20px;
       display: flex;
-      gap: 20px;
+      gap: 30px;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-
   }
 
   .card {
       border: 10px double #8b521c;
       width: 300px;
-      height: 300px;
+      height: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: scale(1.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .card img {
       width: 80px;
-      height: auto;
+      height: 85px;
       border-radius: 10px;
       margin-left: auto;
   }
@@ -108,8 +131,7 @@
   footer {
       background: #522b06;
       color: white;
-      padding: 10px 0;
-      margin-top: 20px;
+      padding: 2px 0px;
   }
 
   .footer-container {
@@ -119,43 +141,155 @@
   }
 
   .social-media {
-      width: 40px;
-      padding: 20px;
-      border-radius: 35%;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      object-fit: fill;
+
+      padding: 10px;
+      border-radius: 30%;
+      transition: transform 0.3s ease;
+      object-fit: cover
   }
 
-  @media (max-width: 750px) {
+  .social-media:hover {
+      transform: scale(1.1);
+  }
 
-        .banner-content{
-            font-size: 0.9rem;
-        }
+  #contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 220px;
+      height: 110px;
+  }
+
+  #contact-form input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      width: 100%;
+  }
+
+  #contact-form button,
+  .btn-contact {
+      background-color: #8b521c;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.3s ease;
+  }
+
+
+  #contact-form button:hover,
+  .btn-contact:hover {
+      background-color: #a76228;
+      transform: scale(1.1);
+  }
+
+  .contact-section {
+      display: none;
+      margin-bottom: 0;
+      transition: margin-bottom 0.3s ease;
+  }
+
+  .contact-section.active {
+      display: block;
+      margin-bottom: 60px;
+  }
+
+  .burger {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      margin-right: 20px;
+  }
+
+  @media (max-width: 600px) {
+
+      .banner-content {
+          font-size: 0.7rem;
+      }
+
+      .banner-inner {
+          width: 60%;
+      }
+
       .banner-row {
           flex-direction: column;
           gap: 50px;
       }
 
       .banner-row img {
-          width: 95%;
-          height: 70vh;
+          width: 85%;
+          height: 28vh;
       }
 
       .about {
           width: 95%;
       }
 
-      .card{
-        height: 255px;
-        width: 255px;
+      .card {
+          height: 220px;
+          width: 220px;
       }
 
-      .card img{
-        height: 85px;
-        width: 90px;
+      .card img {
+          height: 50px;
+          width: 50px;
       }
 
       .footer-container {
-          padding: 0px;
           font-size: 0.7rem;
+          flex-direction: column;
+          align-items: center;
       }
+
+      .contact-section.active {
+          margin-bottom: 60px;
+      }
+
+      nav ul {
+          flex-direction: column;
+          background-color: #522b06;
+          width: 200px;
+          display: none;
+          padding: 0px;
+      }
+
+      nav ul.active {
+          display: flex;
+      }
+
+      .burger {
+          display: block;
+      }
+
+
+
+      nav ul {
+          flex-direction: column;
+          background-color: #522b06;
+          position: absolute;
+          top: 70px;
+          right: 0;
+          width: 200px;
+          display: none;
+          padding: 10px 0;
+      }
+
+      nav ul.active {
+          display: flex;
+      }
+
+      .burger {
+          display: block;
+      }
+
 
   }

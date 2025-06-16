@@ -12,7 +12,10 @@
 
     <nav>
         <img id="logo" src="/images/logo3.jpg" alt="Cafe Logo">
-        <ul>
+
+        <div class="burger" onclick="toggleMenu()">☰</div>
+
+        <ul id="nav-links">
             <li><a href="#contact">Contact Us</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#menu">Menu</a></li>
@@ -214,10 +217,25 @@
     <footer>
         <div class="footer-container">
             <div id="contact" class="footer-section">
-                <h4>Contact Us</h4>
+                <button type="button" onclick="toggleContactForm()" class="btn-contact">Contact Us</button>
+
                 <p>Email: info@ourcafe.com</p>
                 <p>Address: Jbeil, Lebanon</p>
                 <p><strong>Phone:</strong> +961 70 123 456</p>
+                <div id="contact-section" class="contact-section">
+                    <form id="contact-form" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
 
             <div class="footer-section">
@@ -237,6 +255,40 @@
         <p class="copyright">© 2025 Our Cafe.</p>
     </footer>
 
+
+
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            if (!firstName || !lastName || !email) {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            alert("Thank you for contacting us!");
+            return true;
+        }
+
+
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("active");
+        }
+        function toggleContactForm() {
+            const section = document.getElementById('contact-section');
+            section.classList.toggle('active');
+        }
+
+    </script>
 
 </body>
 
