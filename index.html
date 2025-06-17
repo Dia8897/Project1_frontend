@@ -207,35 +207,34 @@
                 </div>
 
             </section>
+        </div>
 
+        <div id="contact" class="contact-form">
 
-
-
+            <h3>Contact Us</h3>
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
 
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div id="contact" class="footer-section">
-                <button type="button" onclick="toggleContactForm()" class="btn-contact">Contact Us</button>
 
-                <p>Email: info@ourcafe.com</p>
+
+
+
+    <footer>
+
+
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@ourcafe.com">info@ourcafe.com</a></p>
                 <p>Address: Jbeil, Lebanon</p>
                 <p><strong>Phone:</strong> +961 70 123 456</p>
-                <div id="contact-section" class="contact-section">
-                    <form id="contact-form" onsubmit="return validateForm()">
-                        <div class="form-group">
-                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Email Address" required>
-                        </div>
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
             </div>
 
             <div class="footer-section">
@@ -282,10 +281,6 @@
         function toggleMenu() {
             const navLinks = document.getElementById("nav-links");
             navLinks.classList.toggle("active");
-        }
-        function toggleContactForm() {
-            const section = document.getElementById('contact-section');
-            section.classList.toggle('active');
         }
 
     </script>
