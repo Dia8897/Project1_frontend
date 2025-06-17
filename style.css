@@ -95,7 +95,7 @@
   }
 
   .menu-cards h2 {
-      margin-top: 60px;
+      margin-top: 90px;
   }
 
   .cards {
@@ -227,7 +227,7 @@
       margin-right: 20px;
   }
 
-  @media(max-width:1084px) {
+  @media(max-width:1280px) {
       .contact-form {
           width: 918px;
       }
@@ -258,7 +258,7 @@
   @media (max-width: 670px) {
 
           .contact-form {
-          width: 450px;
+          width: 530px;
       }
 
       .banner-content {
@@ -281,13 +281,15 @@
       }
 
       .card {
-          height: 220px;
-          width: 220px;
+          height: 270px;
+          width: 270px;
+        
       }
 
       .card img {
-          height: 50px;
-          width: 50px;
+        margin-top: 20px;
+          height: 100px;
+          width: 100px;
       }
 
       .footer-container {
@@ -339,12 +341,12 @@
       }
     }
 
-    @media (max-width: 510px) {
+    @media (max-width: 570px) {
         .card{
            padding: 20px;
         }
           .contact-form {
-          width: 230px;
+          width: 270px;
       }
         
     }
