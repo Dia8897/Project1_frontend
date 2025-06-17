@@ -83,9 +83,13 @@
       align-items: center;
   }
 
+  .banner-row p {
+      font-size: 1.1rem;
+  }
+
   .banner-row img {
-      width: 60%;
-      height: 70vh;
+      width: 65%;
+      height: 80vh;
       border-radius: 20px;
   }
 
@@ -98,6 +102,13 @@
       margin-top: 90px;
   }
 
+  .menu-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
   .cards {
       /* margin: 20px; */
       display: flex;
@@ -106,7 +117,6 @@
       /* max-width:100%; */
       align-items: center;
       justify-content: center;
-      max-width: 1380px;
   }
 
   .card {
@@ -131,9 +141,9 @@
       margin-top: 20px;
   }
 
- .card p {
-    line-height: 1.7; 
-} 
+  .card p {
+      line-height: 1.7;
+  }
 
   footer {
       background: #522b06;
@@ -143,7 +153,7 @@
 
   .footer-container {
       display: flex;
-      gap:400px;
+      gap: 400px;
       align-items: center;
       justify-content: center;
   }
@@ -207,6 +217,7 @@
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 14px;
+      width: 50%;
   }
 
   .btn-submit {
@@ -233,42 +244,207 @@
       margin-right: 20px;
   }
 
-  @media(max-width:1280px) {
+
+
+
+
+
+
+
+  @media (min-width:1850px) {
+      .banner-row img {
+          height: 900px;
+      }
+
+      .banner-inner {
+          width: 1800px;
+      }
+
+      h2 {
+          font-size: 3rem;
+      }
+
+      .contact-form h3 {
+          font-size: 3rem;
+      }
+
+      .banner-content {
+          font-size: 1.8rem;
+      }
+
+      .banner-row p {
+          line-height: 1.3;
+          font-size: 1.8rem;
+      }
+
+
+      .cards {
+          font-size: 1.4rem;
+          max-width: 2000px;
+      }
+
+      .card img {
+          width: 120px;
+          height: 120px;
+      }
+
+      .card {
+          height: 400px;
+          width: 400px;
+      }
+
+      .contact-form {
+          width: 1700px;
+      }
+
+      .footer-container {
+          font-size: 1.9rem;
+          gap: 460px;
+      }
+
+
+  }
+
+  @media(max-width:1850px) and (min-width:1680px) {
+      .banner-row img {
+          height: 700px;
+      }
+
+      .banner-inner {
+          width: 1500px;
+      }
+
+      .contact-form {
+          width: 1200px;
+      }
+
+      .banner-row p {
+          font-size: 1.5rem;
+      }
+
+
+      .cards {
+          font-size: 1.4rem;
+          max-width: 1500px;
+      }
+
+      .card img {
+          width: 80px;
+          height: 80px;
+      }
+
+      .card p {
+          font-size: 1rem;
+          line-height: 1.4;
+      }
+
+      .footer-container {
+          gap: 200px;
+      }
+
+  }
+
+
+
+  @media (max-width:1680px) and (min-width:1290px) {
+
+      .banner-row img {
+          height: 550px;
+      }
+
+      .cards {
+          max-width: 1280px;
+      }
+
+
+      .card {
+          width: 280px;
+          height: 280px;
+      }
+
+
+      .card img {
+          width: 70px;
+          height: 70px;
+      }
+
+      .contact-form {
+          width: 1200px;
+      }
+
+      .footer-container {
+          gap: 400px;
+      }
+
+      .banner-row {
+          font-size: 1.4rem;
+      }
+
+  }
+
+
+  @media(max-width:1290px) and (min-width:959px) {
+
       .contact-form {
           width: 918px;
       }
 
       .banner-row img {
-          height: 55vh;
+          height: 500px;
       }
 
-      .footer-container{
-        gap: 250px;
+      .footer-container {
+          gap: 250px;
       }
   }
 
-    @media(max-width:958px) {
+  @media(max-width:959px) and (min-width:790px) {
+
+      .banner-inner {
+          width: 750px;
+      }
+
+      .banner-row img {
+          width: 80%;
+          height: 500px;
+      }
+
+
       .contact-form {
           width: 600px;
       }
 
-      .contact-form input{
-        width: 50%;
+      .contact-form input {
+          width: 50%;
       }
 
-      .footer-container{
-        gap: 100px;
+      .footer-container {
+          gap: 100px;
       }
   }
 
-  @media (max-width: 670px) {
+  @media(max-width:790px) and (min-width:670px) {
 
-          .contact-form {
-          width: 530px;
+      .banner-inner {
+          width: 650px;
       }
 
+      .banner-row p {
+          font-size: 1rem;
+      }
+
+      .contact-form {
+          width: 600px;
+      }
+
+  }
+
+  @media (max-width: 790px) {
+
+
+
       .banner-content {
-          font-size: 0.7rem;
+          font-size: 0.75rem;
       }
 
 
@@ -277,9 +453,11 @@
           gap: 20px;
       }
 
+
+
       .banner-row img {
           width: 100%;
-          height: 40vh;
+          height: 420px;
       }
 
       .about {
@@ -287,30 +465,27 @@
       }
 
       .card {
-          height: 270px;
-          width: 270px;
-        
+          height: 200px;
+          width: 200px;
+
       }
 
-      .card p{
-        line-height: 1.5;
+      .card p {
+          font-size: 0.68rem;
       }
 
       .card img {
-        margin-top: 5px;
-          height: 100px;
-          width: 100px;
+          margin-top: 5px;
+          height: 50px;
+          width: 50px;
       }
+
 
       .footer-container {
           font-size: 0.7rem;
           flex-direction: column;
           align-items: center;
-            gap: 10px;
-      }
-
-      .contact-section.active {
-          margin-bottom: 60px;
+          gap: 10px;
       }
 
       nav ul {
@@ -349,17 +524,46 @@
       .burger {
           display: block;
       }
-    }
+  }
 
-    @media (max-width: 570px) {
-        .card{
-           padding: 20px;
-        }
-          .contact-form {
-          width: 270px;
+  @media(max-width:670px) {
+      .contact-form {
+          width: 530px;
       }
-        
-    }
+
+      .banner-row p {
+          font-size: 0.7rem;
+      }
+
+  }
+
+  @media(max-width:659px) {
+      .contact-form {
+          width: 400px;
+      }
 
 
-  
+  }
+
+  @media (max-width: 509px) {
+      .card {
+          padding: 20px;
+      }
+
+      .contact-form {
+          width: 200px;
+      }
+
+      .banner-inner {
+          width: 80%;
+      }
+
+      .banner-row img {
+          height: 300px;
+      }
+
+      .card p {
+          font-size: 0.8rem;
+      }
+
+  }
